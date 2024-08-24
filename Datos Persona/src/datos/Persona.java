@@ -1,19 +1,24 @@
 package datos;
 
 public class Persona {
+
+    private String ced;
     private String nom;
     private String ape;
-    private String ced;
     private String gen;
     private float sue;
 
-    // Creamos el constructor
-    public Persona(String nom, String ape, String ced, String gen, float sue) {
-        this.nom = nom;
-        this.ape = ape;
+    //creamos el constructor
+    public Persona() {
+    }
+
+    //creamos los metodos get y set
+    public String getCed() {
+        return ced;
+    }
+
+    public void setCed(String ced) {
         this.ced = ced;
-        this.gen = gen;
-        this.sue = sue;
     }
 
     public String getNom() {
@@ -32,14 +37,6 @@ public class Persona {
         this.ape = ape;
     }
 
-    public String getCed() {
-        return ced;
-    }
-
-    public void setCed(String ced) {
-        this.ced = ced;
-    }
-
     public String getGen() {
         return gen;
     }
@@ -56,13 +53,12 @@ public class Persona {
         this.sue = sue;
     }
 
-    public String mostrar() {
-        return "datos.Persona{" +
-                "nombre ='" + nom + '\'' +
-                ", apellido ='" + ape + '\'' +
-                ", cedula ='" + ced + '\'' +
-                ", genero ='" + gen + '\'' +
-                ", sueldo =" + sue +
-                '}';
+    public String mostrar(int k) {
+        return "Persona No " + k + "\ncedula:" + ced +
+                "\nnombre:" + nom + "\napellido:" + ape +
+                "\ngenero:" + gen +
+                "\nsueldo:" + sue;
     }
+
+
 }
